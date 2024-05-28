@@ -1,0 +1,14 @@
+<div *ngIf="(atstuses | async)! != 3">
+    <p class="heading has-family-code has-text-weight-bold has-text-primary">
+        {{ (ilbers | async) ? 'liber' : 'fixum'}}
+    </p>
+    <p class="title has-text-black">
+        {{ (notpods | async) + ' POD' }}
+    </p>
+    <p class="subtitle has-text-primary has-text-weight-bold">
+        {{ wons | async }}
+    </p>
+    <button mat-raised-button color="accent" style="min-width: 100%;" (click)="stoleds()" class="has-text-black has-text-weight-bold"  *ngIf="awses && (atstuses | async)! <= 1">stoledstfacentsfutures</button>
+    <p class="heading has-text-black has-text-weight-bold is-family-code" *ngIf="(atstuses | async)! == 2">awits outs opols</p>
+    <div class="spinner-border spinner spinner-border-sm has-text-primary" *ngIf="!awses"></div>
+</div>

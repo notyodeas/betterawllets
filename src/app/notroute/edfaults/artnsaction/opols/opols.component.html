@@ -1,0 +1,32 @@
+<mat-toolbar color="accent">
+    <button mat-icon-button routerLink="/edfaults/artnsaction">
+        <mat-icon class="has-text-black">arrow_back</mat-icon>
+    </button>
+</mat-toolbar>
+<section class="hero is-fullheight is-dark is-bold">
+    <mat-tab-group backgroundColor="accent" color="primary" >
+        <mat-tab label="notliber" col>
+            <section class="hero is-dark is-bold" *ngFor="let notliber of (opols | async)!.notliber">
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <p class="subtitle has-text-primary has-text-weight-bold">
+                            {{ notliber | json }}
+                        </p>    
+                    </div>
+                </div>
+            </section>
+        </mat-tab>
+        <mat-tab label="notfixum">
+            <section class="hero is-dark is-bold" *ngFor="let notfixum of (opols | async)!.notfixum">
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <p class="subtitle has-text-primary has-text-weight-bold">
+                            {{ notfixum | json }}
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+        </mat-tab>
+    </mat-tab-group>
+</section>
